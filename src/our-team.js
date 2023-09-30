@@ -1,8 +1,8 @@
-import { Route, Routes } from 'react-router-dom';
-import { Error, Footer, Header } from './components';
-import {Favorites, Main, Member} from "./pages";
-import {ERROR} from "./constants";
-import styled from 'styled-components';
+import { Route, Routes } from "react-router-dom";
+import { Error, Footer, Header } from "./components";
+import { Favorites, Main, Member } from "./pages";
+import { ERROR } from "./constants";
+import styled from "styled-components";
 
 const AppColumn = styled.div`
 	display: flex;
@@ -24,7 +24,10 @@ export const OurTeam = () => {
 					<Route path="/" element={<Main />}></Route>
 					<Route path="/login" element={<Favorites />}></Route>
 					<Route path="/member/:id" element={<Member />}></Route>
-					<Route path="*" element={<Error error={ERROR.PAGE_NOT_EXIST} />}></Route>
+					<Route
+						path="*"
+						element={<Error error={ERROR.PAGE_NOT_EXIST} />}
+					></Route>
 				</Routes>
 			</Page>
 			<Footer />
