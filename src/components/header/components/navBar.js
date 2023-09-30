@@ -11,8 +11,8 @@ const NavBarContainer = ({ className }) => {
 	return (
 		<Div>
 			<nav className={className}>
-				<Link to={'/'}>Main</Link>
-				<Link to={'/favorites'}>Favorites</Link>
+				<Link to={'/'}>Главная</Link>
+				<Link to={'/favorites'}>Избранные</Link>
 			</nav>
 		</Div>
 	);
