@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-const FavoritesContainer = ({className}) => {
-	return <></>
-}
+const FavoritesContainer = ({ className }) => {
+	return <div className={className}>Favorites</div>;
+};
 
 export const Favorites = styled(FavoritesContainer)``;
