@@ -7,6 +7,7 @@ import { selectIsLoading } from './redux/selectors';
 import { useEffect } from 'react';
 import { getMembersAsync } from './redux/actions';
 import styled from 'styled-components';
+import { getTeamInfoAsync } from "./redux/actions/get-team-info-async";
 
 const AppColumn = styled.div`
 	display: flex;
@@ -34,6 +35,7 @@ export const OurTeam = () => {
 
 	useEffect(() => {
 		dispatch(getMembersAsync);
+		dispatch(getTeamInfoAsync);
 	}, [dispatch]);
 
 	return (
