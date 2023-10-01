@@ -3,16 +3,17 @@ import { Error, Footer, Header, Loader } from './components';
 import { Favorites, Main, Member } from './pages';
 import { ERROR } from './constants';
 import styled from 'styled-components';
-import { useDispatch, useSelector } from "react-redux";
-import { selectIsLoading, selectMembers } from "./redux/selectors";
-import { useEffect } from "react";
-import { getMembersAsync } from "./redux/actions";
+import { useDispatch, useSelector } from 'react-redux';
+import { selectIsLoading, selectMembers } from './redux/selectors';
+import { useEffect } from 'react';
+import { getMembersAsync } from './redux/actions';
 
 const AppColumn = styled.div`
 	display: flex;
 	flex-direction: column;
+	max-width: 1230px;
+	width: 90%;
 	justify-content: space-between;
-	width: 1230px;
 	min-height: 100%;
 	background-color: #fafafa;
 	margin: auto;
@@ -33,9 +34,9 @@ export const OurTeam = () => {
 
 	return (
 		<AppColumn>
-			{isLoading ?
+			{isLoading ? (
 				<Loader />
-				:
+			) : (
 				<>
 					<Header />
 					<Page>
@@ -51,7 +52,7 @@ export const OurTeam = () => {
 					</Page>
 					<Footer />
 				</>
-			}
+			)}
 		</AppColumn>
 	);
 };
