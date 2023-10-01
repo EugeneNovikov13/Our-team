@@ -65,7 +65,7 @@ export const Card = styled(CardContainer)`
 	border-radius: 5px;
 	padding: 20px 30px 30px;
 	box-shadow: 0px 2px 4px #b6b6b6;
-	margin: auto;
+	margin: 1%;
 
 	& .age {
 		margin: 5px 0;
