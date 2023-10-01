@@ -8,3 +8,4 @@ export * from './badge/badge';
 export * from './card/card';
 export * from './photo/photo';
 export * from './progress/progress';
+export * from './container/container';
