@@ -1,10 +1,10 @@
-import { useDispatch, useSelector } from "react-redux";
-import { Card, Container, H2, Icon } from '../../components';
-import { selectFavorites } from "../../redux/selectors";
-import styled from 'styled-components';
 import { useLayoutEffect } from "react";
-import { getFavorites } from "../../utils";
+import { useDispatch, useSelector } from "react-redux";
+import { selectFavorites } from "../../redux/selectors";
 import { setFavoritesMembers } from "../../redux/actions/set-favorites-members";
+import { getFavorites } from "../../utils";
+import { Card, Container, H2, Icon } from '../../components';
+import styled from 'styled-components';
 
 const FavoritesContainer = ({ className }) => {
 	const dispatch = useDispatch();

@@ -1,14 +1,18 @@
-import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { Photo } from "../photo/photo";
+import { useDispatch, useSelector } from "react-redux";
+import { getFavorites } from "../../utils";
+import { setFavoritesMembers } from "../../redux/actions/set-favorites-members";
+import { selectFavorites } from "../../redux/selectors";
 import { H2 } from "../H2/H2";
 import { Button } from "../button/button";
-import { getFavorites } from "../../utils";
-import { useDispatch } from "react-redux";
-import { setFavoritesMembers } from "../../redux/actions/set-favorites-members";
+import { FavoriteButton } from "../favorite-button/favorite-button";
+import { Photo } from "../photo/photo";
+import favoriteImage from "../../images";
+import styled from "styled-components";
 
 const CardContainer = ({ id, className, image, name, age, about }) => {
 	const dispatch = useDispatch();
+	const favorites = useSelector(selectFavorites);
 
 	const updateFavorites = (favMembers) => {
 		localStorage.setItem("favorites", JSON.stringify(favMembers));
@@ -60,9 +64,10 @@ const CardContainer = ({ id, className, image, name, age, about }) => {
 						Открыть
 					</Button>
 				</Link>
-				<Button onClick={() => addToFavorites(id, image, name, age, about)}>
-					В избранное
-				</Button>
+				<FavoriteButton
+					onClick={() => addToFavorites(id, image, name, age, about)}
+					iconSrc={favorites[id] ? favoriteImage.del : favoriteImage.add}
+				/>
 			</div>
 
 		</div>
@@ -88,5 +93,9 @@ export const Card = styled(CardContainer)`
 		text-align: center;
 		hyphens: auto;
 		margin: 0 0 20px 0;
+	}
+
+	& .buttons {
+		display: flex;
 	}
 `;
