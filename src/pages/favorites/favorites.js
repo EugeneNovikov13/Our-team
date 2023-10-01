@@ -21,7 +21,7 @@ const FavoritesContainer = ({ className }) => {
 
 	return (
 		<>
-			<H2 margin="30px auto">
+			<H2 margin="5% auto">
 				<Icon id="fa-star" fontSize="20px" margin="1px 5px 0 0" color="#5543ff" />
 				Избранные
 			</H2>

@@ -11,8 +11,9 @@ import styled from 'styled-components';
 const AppColumn = styled.div`
 	display: flex;
 	flex-direction: column;
+	max-width: 1230px;
+	width: 90%;
 	justify-content: space-between;
-	width: 1230px;
 	min-height: 100%;
 	background-color: #fafafa;
 	margin: auto;
@@ -32,9 +33,9 @@ export const OurTeam = () => {
 
 	return (
 		<AppColumn>
-			{isLoading ?
+			{isLoading ? (
 				<Loader />
-				:
+			) : (
 				<>
 					<Header />
 					<Page>
@@ -50,7 +51,7 @@ export const OurTeam = () => {
 					</Page>
 					<Footer />
 				</>
-			}
+			)}
 		</AppColumn>
 	);
 };
