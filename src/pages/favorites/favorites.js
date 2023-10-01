@@ -1,10 +1,23 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 import { Card, Container, H2, Icon } from '../../components';
-import { selectMembers } from '../../redux/selectors';
+import { selectFavorites } from "../../redux/selectors";
 import styled from 'styled-components';
+import { useLayoutEffect } from "react";
+import { getFavorites } from "../../utils";
+import { setFavoritesMembers } from "../../redux/actions/set-favorites-members";
 
 const FavoritesContainer = ({ className }) => {
-	const members = useSelector(selectMembers);
+	const dispatch = useDispatch();
+	const favorites = useSelector(selectFavorites);
+
+	//используем хук и localStorage, чтобы избранное не терялось при перезагрузке страницы
+	useLayoutEffect(() => {
+		const favoritesMembers = getFavorites();
+
+		if (favoritesMembers.length < 1) return;
+
+		dispatch(setFavoritesMembers(favoritesMembers));
+	}, [dispatch]);
 
 	return (
 		<>
@@ -13,11 +26,11 @@ const FavoritesContainer = ({ className }) => {
 				Избранные
 			</H2>
 			<Container>
-				{Object.entries(members).map(([id, { photo, name, age, about }]) => (
+				{Object.entries(favorites).map(([id, { image, name, age, about }]) => (
 					<Card
 						key={id}
 						id={id}
-						image={photo}
+						image={image}
 						name={name}
 						age={age}
 						about={about}
