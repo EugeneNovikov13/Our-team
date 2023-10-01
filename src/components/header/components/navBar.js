@@ -22,10 +22,15 @@ export const NavBar = styled(NavBarContainer)`
 	display: flex;
 	text-decoration: none;
 	margin-right: 60px;
+
 	& a {
-		color: #4d4d4d;
+		color: #707070;
 		text-decoration: none;
 		margin: auto 30px;
 		font-size: 20px;
+	}
+
+	& a:hover {
+		color: #5543ff;
 	}
 `;
