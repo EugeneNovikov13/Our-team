@@ -1,32 +1,27 @@
-import styled from 'styled-components';
 import { GitHubIconLink } from './components/gitHubIconLink';
-import { EmailIconLink } from './components/emailIconLink';
+import { useSelector } from 'react-redux';
+import { selectMembers } from '../../redux/selectors';
+import styled from 'styled-components';
 
 const FooterContainer = ({ className }) => {
+	const members = useSelector(selectMembers);
+
 	return (
 		<footer className={className}>
-			<div className="member-social">
-				<GitHubIconLink link="https://github.com/EugeneNovikov13" />
-				<EmailIconLink link="ggg@gmail.com" />
-				<div>Eugene Novikov</div>
-			</div>
-			<div className="member-social">
-				<GitHubIconLink link="https://github.com/MCF512" />
-				<EmailIconLink link="ggg@gmail.com" />
-				<div>Egor Demchenko</div>
-			</div>
-			<div className="member-social">
-				<GitHubIconLink link="https://github.com/sgurushchuk" />
-				<EmailIconLink link="ggg@gmail.com" />
-				<div>Stanislav Gurushchuk</div>
-			</div>
+			{Object.entries(members).map(([id, { name, social, surname }]) => (
+				<div key={id} className="member-social">
+					<GitHubIconLink link={social} />
+					<div>
+						{name} {surname}
+					</div>
+				</div>
+			))}
 		</footer>
 	);
 };
 
 export const Footer = styled(FooterContainer)`
-	padding: 20px 40px;
-	width: 1000px;
+	padding: 20px 70px;
 
 	& .member-social {
 		display: flex;

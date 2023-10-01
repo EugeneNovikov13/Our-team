@@ -11,6 +11,7 @@ const HeaderContainer = ({ className }) => {
 };
 
 export const Header = styled(HeaderContainer)`
+	background-color: #fafafa;
 	height: 80px;
 	padding: 20px 40px;
 	position: fixed;
