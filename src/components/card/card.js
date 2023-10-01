@@ -1,14 +1,14 @@
-import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { getFavorites } from "../../utils";
-import { setFavoritesMembers } from "../../redux/actions/set-favorites-members";
-import { selectFavorites } from "../../redux/selectors";
-import { H2 } from "../H2/H2";
-import { Button } from "../button/button";
-import { FavoriteButton } from "../favorite-button/favorite-button";
-import { Photo } from "../photo/photo";
-import favoriteImage from "../../images";
-import styled from "styled-components";
+import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { getFavorites } from '../../utils';
+import { setFavoritesMembers } from '../../redux/actions/set-favorites-members';
+import { selectFavorites } from '../../redux/selectors';
+import { H2 } from '../H2/H2';
+import { Button } from '../button/button';
+import { FavoriteButton } from '../favorite-button/favorite-button';
+import { Photo } from '../photo/photo';
+import favoriteImage from '../../images';
+import styled from 'styled-components';
 
 const CardContainer = ({ id, className, image, name, age, about }) => {
 	const dispatch = useDispatch();
@@ -41,7 +41,7 @@ const CardContainer = ({ id, className, image, name, age, about }) => {
 		<div className={className}>
 			<Photo src={image} rounded />
 
-			<H2 margin="10px 0">{name}</H2>
+			<H2 margin="5px 0">{name}</H2>
 
 			<div className="age">Возраст: {age}</div>
 
