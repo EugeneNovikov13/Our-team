@@ -1,10 +1,10 @@
-import { useDispatch, useSelector } from "react-redux";
-import { Card, Container, H2, Icon } from '../../components';
-import { selectFavorites } from "../../redux/selectors";
-import styled from 'styled-components';
 import { useLayoutEffect } from "react";
-import { getFavorites } from "../../utils";
+import { useDispatch, useSelector } from "react-redux";
+import { selectFavorites } from "../../redux/selectors";
 import { setFavoritesMembers } from "../../redux/actions/set-favorites-members";
+import { getFavorites } from "../../utils";
+import { Card, Container, H2, Icon } from '../../components';
+import styled from 'styled-components';
 
 const FavoritesContainer = ({ className }) => {
 	const dispatch = useDispatch();
@@ -21,7 +21,7 @@ const FavoritesContainer = ({ className }) => {
 
 	return (
 		<>
-			<H2 margin="30px auto">
+			<H2 margin="5% auto">
 				<Icon id="fa-star" fontSize="20px" margin="1px 5px 0 0" color="#5543ff" />
 				Избранные
 			</H2>

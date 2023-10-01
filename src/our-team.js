@@ -1,18 +1,20 @@
 import { Route, Routes } from 'react-router-dom';
-import { Error, Footer, Header } from './components';
+import { Error, Footer, Header, Loader } from './components';
 import { Favorites, Main, Member } from './pages';
 import { ERROR } from './constants';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectMembers } from './redux/selectors';
+import { selectIsLoading } from "./redux/selectors";
 import { useEffect } from 'react';
 import { getMembersAsync } from './redux/actions';
 import styled from 'styled-components';
+import { getTeamInfoAsync } from "./redux/actions/get-team-info-async";
 
 const AppColumn = styled.div`
 	display: flex;
 	flex-direction: column;
+	max-width: 1230px;
+	width: 90%;
 	justify-content: space-between;
-	width: 1230px;
 	min-height: 100%;
 	background-color: #fafafa;
 	margin: auto;
@@ -24,27 +26,34 @@ const Page = styled.div`
 
 export const OurTeam = () => {
 	const dispatch = useDispatch();
-	const members = useSelector(selectMembers);
+	const isLoading = useSelector(selectIsLoading);
 
 	useEffect(() => {
 		dispatch(getMembersAsync);
+		dispatch(getTeamInfoAsync);
 	}, [dispatch]);
 
 	return (
 		<AppColumn>
-			<Header />
-			<Page>
-				<Routes>
-					<Route path="/" element={<Main />}></Route>
-					<Route path="/favorites" element={<Favorites />}></Route>
-					<Route path="/member/:id" element={<Member />}></Route>
-					<Route
-						path="*"
-						element={<Error error={ERROR.PAGE_NOT_EXIST} />}
-					></Route>
-				</Routes>
-			</Page>
-			<Footer />
+			{isLoading ? (
+				<Loader />
+			) : (
+				<>
+					<Header />
+					<Page>
+						<Routes>
+							<Route path="/" element={<Main />}></Route>
+							<Route path="/favorites" element={<Favorites />}></Route>
+							<Route path="/member/:id" element={<Member />}></Route>
+							<Route
+								path="*"
+								element={<Error error={ERROR.PAGE_NOT_EXIST} />}
+							></Route>
+						</Routes>
+					</Page>
+					<Footer />
+				</>
+			)}
 		</AppColumn>
 	);
 };

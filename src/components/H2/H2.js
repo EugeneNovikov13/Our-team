@@ -24,10 +24,9 @@ const H2Container = ({
 export const H2 = styled(H2Container)`
 	display: flex;
 	align-items: center;
-	// margin: ${({ margin }) => (margin ? margin : '0px')};
 
 	& h2 {
-		font-size: 22px;
+		font-size: ${({ badge }) => (badge ? '26px' : '22px')};
 		font-weight: 500;
 		color: #707070;
 		line-height: 1;
