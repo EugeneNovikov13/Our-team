@@ -1,20 +1,16 @@
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
+import { selectMembers, selectTeamInfo } from "../../redux/selectors";
 import { Card, Container } from '../../components';
-import { selectMembers } from '../../redux/selectors';
 import styled from 'styled-components';
 
 const MainContainer = ({ className }) => {
 	const members = useSelector(selectMembers);
+	const teamInfo = useSelector(selectTeamInfo);
 
 	return (
 		<div className={className}>
 			<div className="main-discription">
-				Мы - команда трех энтузиастов веб-разработки, находящихся на захватывающем
-				пути обучения в мире веб-технологий. В настоящий момент мы учимся в школе
-				Result School, стремясь освоить все тонкости и секреты создания
-				современных веб-приложений. Наша цель - вдохновляться, изучать новое и
-				совершенствовать свои навыки вместе, чтобы создавать качественные и
-				инновационные веб-проекты.
+				{teamInfo}
 			</div>
 			<Container>
 				{Object.entries(members).map(([id, { photo, name, age, about }]) => (
