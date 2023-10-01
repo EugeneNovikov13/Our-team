@@ -1,4 +1,4 @@
-import { ACTION_TYPE } from "../actions";
+import { ACTION_TYPE } from '../actions';
 
 const initialMembersState = {};
 
@@ -7,7 +7,7 @@ export const membersReducer = (state = initialMembersState, action) => {
 		case ACTION_TYPE.GET_MEMBERS:
 			return {
 				...state,
-				...action.payload
+				...action.payload,
 			};
 
 		default:

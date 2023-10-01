@@ -1,5 +1,5 @@
-import { useSelector } from "react-redux";
-import { selectMembers, selectTeamInfo } from "../../redux/selectors";
+import { useSelector } from 'react-redux';
+import { selectMembers, selectTeamInfo } from '../../redux/selectors';
 import { Card, Container } from '../../components';
 import styled from 'styled-components';
 
@@ -9,7 +9,7 @@ const MainContainer = ({ className }) => {
 
 	return (
 		<div className={className}>
-			<div className="main-discription">
+			<div className='main-discription'>
 				{teamInfo}
 			</div>
 			<Container>

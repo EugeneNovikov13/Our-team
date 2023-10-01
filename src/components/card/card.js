@@ -41,15 +41,15 @@ const CardContainer = ({ id, className, image, name, age, about }) => {
 		<div className={className}>
 			<Photo src={image} rounded />
 
-			<H2 margin="5px 0">{name}</H2>
+			<H2 margin='5px 0'>{name}</H2>
 
-			<div className="age">Возраст: {age}</div>
+			<div className='age'>Возраст: {age}</div>
 
-			<p className="about">{about}</p>
+			<p className='about'>{about}</p>
 
-			<div className="buttons">
+			<div className='buttons'>
 				<Link to={`/member/${id}`}>
-					<Button margin="0 10px 0 0">Открыть</Button>
+					<Button margin='0 10px 0 0'>Открыть</Button>
 				</Link>
 				<FavoriteButton
 					onClick={() => addToFavorites(id, image, name, age, about)}

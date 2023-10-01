@@ -1,5 +1,5 @@
 export const getFavorites = () => {
-	const favoritesMembersJSON = localStorage.getItem("favorites");
+	const favoritesMembersJSON = localStorage.getItem('favorites');
 
 	if (!favoritesMembersJSON) return {};
 

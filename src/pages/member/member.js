@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { selectMembers } from "../../redux/selectors";
+import { selectMembers } from '../../redux/selectors';
 import { H2, Photo, Progress, TextBlock } from '../../components';
 import { transformSkills } from './utils';
 import styled from 'styled-components';
@@ -12,23 +12,23 @@ const MemberContainer = ({ className }) => {
 
 	return (
 		<div className={className}>
-			<div className="info-wrapper">
+			<div className='info-wrapper'>
 				<Photo src={member.photo} />
 
-				<div className="info">
-					<H2 badge={member.role} badgeBgColor="#00b486">
+				<div className='info'>
+					<H2 badge={member.role} badgeBgColor='#00b486'>
 						{`${member.name} ${member.surname}`}
 					</H2>
 
-					<div className="age">{`Возраст: ${member.age}`}</div>
+					<div className='age'>{`Возраст: ${member.age}`}</div>
 
-					<TextBlock title="Обо мне" info={member.about} />
-					<TextBlock title="Вклад в проект" info={member.job} />
-					<TextBlock title="Социальные сети" info={member.social} />
+					<TextBlock title='Обо мне' info={member.about} />
+					<TextBlock title='Вклад в проект' info={member.job} />
+					<TextBlock title='Социальные сети' info={member.social} />
 				</div>
 			</div>
 
-			<div className="skills">
+			<div className='skills'>
 				<H2>Навыки</H2>
 				{transformSkills(member.skills).map(({ label, percent, bgColor }) => {
 					return (

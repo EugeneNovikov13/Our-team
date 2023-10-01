@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-const FavoriteButtonContainer = ({className, onClick, iconSrc}) => {
-	return <img className={className} onClick={onClick} src={iconSrc} alt=""/>
-}
+const FavoriteButtonContainer = ({ className, onClick, iconSrc }) => {
+	return <img className={className} onClick={onClick} src={iconSrc} alt='' />;
+};
 
 export const FavoriteButton = styled(FavoriteButtonContainer)`
 	width: 100px;

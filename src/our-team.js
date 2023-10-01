@@ -7,7 +7,7 @@ import { selectIsLoading } from './redux/selectors';
 import { useEffect } from 'react';
 import { getMembersAsync } from './redux/actions';
 import styled from 'styled-components';
-import { getTeamInfoAsync } from "./redux/actions/get-team-info-async";
+import { getTeamInfoAsync } from './redux/actions/get-team-info-async';
 
 const AppColumn = styled.div`
 	display: flex;
@@ -47,11 +47,11 @@ export const OurTeam = () => {
 					<Header />
 					<Page>
 						<Routes>
-							<Route path="/" element={<Main />}></Route>
-							<Route path="/favorites" element={<Favorites />}></Route>
-							<Route path="/member/:id" element={<Member />}></Route>
+							<Route path='/' element={<Main />}></Route>
+							<Route path='/favorites' element={<Favorites />}></Route>
+							<Route path='/member/:id' element={<Member />}></Route>
 							<Route
-								path="*"
+								path='*'
 								element={<Error error={ERROR.PAGE_NOT_EXIST} />}
 							></Route>
 						</Routes>

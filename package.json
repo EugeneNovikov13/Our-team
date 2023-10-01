@@ -2,7 +2,7 @@
 	"name": "our-team",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://eugenenovikov13.github.io/Our-team/",
+	"homepage": "https://EugeneNovikov13.github.io/Our-team/",
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.17.0",
 		"@testing-library/react": "^13.4.0",

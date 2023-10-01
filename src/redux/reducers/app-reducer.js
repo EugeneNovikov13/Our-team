@@ -1,4 +1,4 @@
-import { ACTION_TYPE } from "../actions";
+import { ACTION_TYPE } from '../actions';
 
 const initialAppState = {
 	isLoading: true,
@@ -11,13 +11,13 @@ export const appReducer = (state = initialAppState, action) => {
 			return {
 				...state,
 				teamInfo: action.payload,
-			}
+			};
 
 		case ACTION_TYPE.END_LOADING:
 			return {
 				...state,
-				isLoading: false
-			}
+				isLoading: false,
+			};
 
 		default:
 			return state;

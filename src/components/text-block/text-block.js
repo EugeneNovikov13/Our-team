@@ -1,13 +1,13 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 const TextBlockContainer = ({ className, title, info }) => {
-  return (
-    <div className={className}>
-      <h3>{title}</h3>
-      <p>{info}</p>
-    </div>
-  )
-}
+	return (
+		<div className={className}>
+			<h3>{title}</h3>
+			<p>{info}</p>
+		</div>
+	);
+};
 
 export const TextBlock = styled(TextBlockContainer)`
   & h3 {
