@@ -1,8 +1,8 @@
-import { useLayoutEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { selectFavorites } from "../../redux/selectors";
-import { setFavoritesMembers } from "../../redux/actions/set-favorites-members";
-import { getFavorites } from "../../utils";
+import { useLayoutEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectFavorites } from '../../redux/selectors';
+import { setFavoritesMembers } from '../../redux/actions/set-favorites-members';
+import { getFavorites } from '../../utils';
 import { Card, Container, H2, Icon } from '../../components';
 import styled from 'styled-components';
 
@@ -21,8 +21,8 @@ const FavoritesContainer = ({ className }) => {
 
 	return (
 		<>
-			<H2 margin="5% auto">
-				<Icon id="fa-star" fontSize="20px" margin="1px 5px 0 0" color="#5543ff" />
+			<H2 margin='5% auto'>
+				<Icon id='fa-star' fontSize='20px' margin='1px 5px 0 0' color='#5543ff' />
 				Избранные
 			</H2>
 			<Container>

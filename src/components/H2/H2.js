@@ -2,13 +2,13 @@ import styled from 'styled-components';
 import { Badge } from '../badge/badge';
 
 const H2Container = ({
-	className,
-	margin,
-	badge,
-	badgeBgColor,
-	badgeTextColor,
-	children,
-}) => {
+						 className,
+						 margin,
+						 badge,
+						 badgeBgColor,
+						 badgeTextColor,
+						 children,
+					 }) => {
 	return (
 		<div className={className}>
 			<h2>{children}</h2>

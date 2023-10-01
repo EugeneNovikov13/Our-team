@@ -9,7 +9,7 @@ const FooterContainer = ({ className }) => {
 	return (
 		<footer className={className}>
 			{Object.entries(members).map(([id, { name, social, surname }]) => (
-				<div key={id} className="member-social">
+				<div key={id} className='member-social'>
 					<GitHubIconLink link={social} />
 					<div>
 						{name} {surname}

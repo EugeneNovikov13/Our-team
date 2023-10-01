@@ -9,8 +9,8 @@ const LargeText = styled.div`
 `;
 
 export const LogoContainer = ({ className }) => (
-	<Link className={className} to="/">
-		<Icon id="fa-cube" fontSize="33px" color="#5543ff" />
+	<Link className={className} to='/'>
+		<Icon id='fa-cube' fontSize='33px' color='#5543ff' />
 		<LargeText>members</LargeText>
 	</Link>
 );

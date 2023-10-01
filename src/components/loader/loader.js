@@ -1,16 +1,16 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 const LoaderContainer = ({ className }) => {
-  return (
-    <div className={className}>
-      <p>Загрузка</p>
+	return (
+		<div className={className}>
+			<p>Загрузка</p>
 
-      <div className="load-bar">
-        <div className="load-bar-child" />
-      </div>
-    </div>
-  )
-}
+			<div className='load-bar'>
+				<div className='load-bar-child' />
+			</div>
+		</div>
+	);
+};
 
 export const Loader = styled(LoaderContainer)`
   position: absolute;

@@ -1,4 +1,4 @@
-import { ACTION_TYPE } from "../actions";
+import { ACTION_TYPE } from '../actions';
 
 const initialFavoritesState = {
 	favMembers: {},
@@ -10,7 +10,7 @@ export const favoritesReducer = (state = initialFavoritesState, action) => {
 			return {
 				...state,
 				favMembers: action.payload,
-			}
+			};
 
 		default:
 			return state;

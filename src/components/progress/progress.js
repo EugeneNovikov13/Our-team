@@ -1,39 +1,39 @@
-import { useEffect, useState } from "react";
-import styled from "styled-components"
+import { useEffect, useState } from 'react';
+import styled from 'styled-components';
 
 const ProgressContainer = ({ className, label, percent, bgColor, textColor }) => {
-  const [animationPercent, setAnimationPercent] = useState(0);
-  const [isAnimate, setIsAnimate] = useState(true);
+	const [animationPercent, setAnimationPercent] = useState(0);
+	const [isAnimate, setIsAnimate] = useState(true);
 
-  const randomPercent = () => {
-    setAnimationPercent(Math.floor(Math.random() * 100));
-  }
+	const randomPercent = () => {
+		setAnimationPercent(Math.floor(Math.random() * 100));
+	};
 
-  let interval;
+	let interval;
 
-  useEffect(() => {
-    interval = setInterval(randomPercent, 10)
+	useEffect(() => {
+		interval = setInterval(randomPercent, 10);
 
-    setTimeout(() => {
-      clearInterval(interval)
-      interval = 0
-      setIsAnimate(false)
-    }, 3000)
-  }, [])
+		setTimeout(() => {
+			clearInterval(interval);
+			interval = 0;
+			setIsAnimate(false);
+		}, 3000);
+	}, []);
 
-  return (
-    <div className={className}>
-      <div className="label">
-        {label}
-      </div>
-      <div className="bar">
-        <div className="percent">
-          {isAnimate ? `${animationPercent}%` : `${percent}%`}
-        </div>
-      </div>
-    </div>
-  )
-}
+	return (
+		<div className={className}>
+			<div className='label'>
+				{label}
+			</div>
+			<div className='bar'>
+				<div className='percent'>
+					{isAnimate ? `${animationPercent}%` : `${percent}%`}
+				</div>
+			</div>
+		</div>
+	);
+};
 
 export const Progress = styled(ProgressContainer)`
   color: #707070;
@@ -67,7 +67,7 @@ export const Progress = styled(ProgressContainer)`
     height: inherit;
     background-color: ${({ bgColor }) => bgColor};
     border-radius: 5px;
-    color: ${({ textColor }) => textColor ? textColor : "#fff"};
+    color: ${({ textColor }) => textColor ? textColor : '#fff'};
     display: flex;
     justify-content: center;
     align-items: center;
