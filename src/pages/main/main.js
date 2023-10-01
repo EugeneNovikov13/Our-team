@@ -34,7 +34,7 @@ const MainContainer = ({ className }) => {
 
 export const Main = styled(MainContainer)`
 	& .main-discription {
-		width: 900px;
-		margin: 50px 200px 0;
+		width: 70%;
+		margin: 5% 15% 0;
 	}
 `;
