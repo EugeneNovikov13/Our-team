@@ -3,7 +3,9 @@ import styled from 'styled-components';
 
 const Div = styled.div`
 	display: flex;
-	justify-content: center;
+	justify-content: start;
+	align-items: end;
+	line-height: 1.5;
 	width: 100%;
 `;
 
@@ -26,7 +28,7 @@ export const NavBar = styled(NavBarContainer)`
 	& a {
 		color: #707070;
 		text-decoration: none;
-		margin: auto 30px;
+		margin-left: 30px;
 		font-size: 20px;
 	}
 

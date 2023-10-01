@@ -18,5 +18,7 @@ export const Header = styled(HeaderContainer)`
 	width: 1230px;
 	top: 0;
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
+	background-color: inherit;
+	border-bottom: 1px solid #707070;
 `;

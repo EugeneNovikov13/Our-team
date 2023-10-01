@@ -1,0 +1,1 @@
+export const selectMember = (state, id) => state.members[id]

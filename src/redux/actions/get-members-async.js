@@ -10,5 +10,8 @@ export const getMembersAsync = dispatch => {
 			type: ACTION_TYPE.GET_MEMBERS,
 			payload: loadedMembers,
 		});
+		dispatch({
+			type: ACTION_TYPE.END_LOADING
+		})
 	});
 };
