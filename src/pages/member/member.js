@@ -1,13 +1,13 @@
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { selectMember } from '../../redux/selectors';
+import { selectMembers } from "../../redux/selectors";
 import { H2, Photo, Progress, TextBlock } from '../../components';
 import { transformSkills } from './utils';
 import styled from 'styled-components';
 
 const MemberContainer = ({ className }) => {
 	const { id } = useParams();
-	const member = useSelector((state) => selectMember(state, id));
+	const member = useSelector(selectMembers)[id];
 
 	return (
 		<div className={className}>
