@@ -30,8 +30,6 @@ export const OurTeam = () => {
 		dispatch(getMembersAsync);
 	}, [dispatch]);
 
-	console.log('main: ', members);
-
 	return (
 		<AppColumn>
 			<Header />
