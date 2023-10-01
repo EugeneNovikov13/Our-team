@@ -9,6 +9,8 @@ const ButtonContainer = ({ className, onClick, margin, children }) => {
 };
 
 export const Button = styled(ButtonContainer)`
+	width: 100px;
+	height: 45px;
 	color: #707070;
 	font-size: 18px;
 	margin: ${({ margin }) => (margin ? margin : '0px')};

@@ -2,11 +2,11 @@ import { Route, Routes } from 'react-router-dom';
 import { Error, Footer, Header, Loader } from './components';
 import { Favorites, Main, Member } from './pages';
 import { ERROR } from './constants';
-import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectIsLoading, selectMembers } from './redux/selectors';
+import { selectIsLoading } from "./redux/selectors";
 import { useEffect } from 'react';
 import { getMembersAsync } from './redux/actions';
+import styled from 'styled-components';
 
 const AppColumn = styled.div`
 	display: flex;
@@ -25,7 +25,6 @@ const Page = styled.div`
 
 export const OurTeam = () => {
 	const dispatch = useDispatch();
-	const members = useSelector(selectMembers);
 	const isLoading = useSelector(selectIsLoading);
 
 	useEffect(() => {

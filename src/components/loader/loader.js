@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { H2 } from "../H2/H2";
 
 const LoaderContainer = ({ className }) => {
   return (
