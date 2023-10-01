@@ -11,15 +11,19 @@ const HeaderContainer = ({ className }) => {
 };
 
 export const Header = styled(HeaderContainer)`
-	background-color: #fafafa;
 	height: 80px;
 	padding: 20px 40px;
 	position: fixed;
 	max-width: 1230px;
-	width: 100%;
+	min-width: 500px;
+	width: 90%;
 	top: 0;
 	display: flex;
 	justify-content: flex-start;
 	background-color: inherit;
 	border-bottom: 1px solid #707070;
+
+	@media only screen and (max-width: 1230px) {
+		width: 100%;
+	}
 `;
