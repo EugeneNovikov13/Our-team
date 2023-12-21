@@ -1,12 +1,11 @@
-import { useLayoutEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectFavorites } from '../../redux/selectors';
-import { setFavoritesMembers } from '../../redux/actions/set-favorites-members';
-import { getFavorites } from '../../utils';
-import { Card, Container, H2, Icon } from '../../components';
-import styled from 'styled-components';
+import {useLayoutEffect} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {selectFavorites} from '../../redux/selectors';
+import {setFavoritesMembers} from '../../redux/actions/set-favorites-members';
+import {getFavorites} from '../../utils';
+import {Card, Container, H2, Icon} from '../../components';
 
-const FavoritesContainer = ({ className }) => {
+export const Favorites = () => {
 	const dispatch = useDispatch();
 	const favorites = useSelector(selectFavorites);
 
@@ -22,11 +21,11 @@ const FavoritesContainer = ({ className }) => {
 	return (
 		<>
 			<H2 margin='5% auto'>
-				<Icon id='fa-star' fontSize='20px' margin='1px 5px 0 0' color='#5543ff' />
+				<Icon id='fa-star' fontSize='20px' margin='1px 5px 0 0' color='#5543ff'/>
 				Избранные
 			</H2>
 			<Container>
-				{Object.entries(favorites).map(([id, { image, name, age, about }]) => (
+				{Object.entries(favorites).map(([id, {image, name, age, about}]) => (
 					<Card
 						key={id}
 						id={id}
@@ -40,5 +39,3 @@ const FavoritesContainer = ({ className }) => {
 		</>
 	);
 };
-
-export const Favorites = styled(FavoritesContainer)``;

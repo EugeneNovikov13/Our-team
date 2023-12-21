@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import { Badge } from '../badge/badge';
+import {Badge} from '../badge/badge';
 
 const H2Container = ({
 						 className,
-						 margin,
 						 badge,
 						 badgeBgColor,
 						 badgeTextColor,
@@ -26,12 +25,12 @@ export const H2 = styled(H2Container)`
 	align-items: center;
 
 	& h2 {
-		font-size: ${({ badge }) => (badge ? '26px' : '22px')};
+		font-size: ${({badge}) => (badge ? '26px' : '22px')};
 		font-weight: 500;
 		color: #707070;
 		line-height: 1;
-		margin: ${({ margin }) => (margin ? margin : '0px')};
-		margin-right: ${({ badge }) => (badge ? '10px' : '')};
+		margin: ${({margin}) => (margin ? margin : '0px')};
+		margin-right: ${({badge}) => (badge ? '10px' : '')};
 		display: flex;
 	}
 `;

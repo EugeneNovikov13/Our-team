@@ -1,5 +1,5 @@
-import { Icon } from '../../../components';
-import { Link } from 'react-router-dom';
+import {Icon} from '../../icon/icon';
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
 const LargeText = styled.div`
@@ -8,9 +8,9 @@ const LargeText = styled.div`
 	margin: auto;
 `;
 
-export const LogoContainer = ({ className }) => (
+export const LogoContainer = ({className}) => (
 	<Link className={className} to='/'>
-		<Icon id='fa-cube' fontSize='33px' color='#5543ff' />
+		<Icon id='fa-cube' fontSize='33px' color='#5543ff'/>
 		<LargeText>members</LargeText>
 	</Link>
 );

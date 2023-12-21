@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ButtonContainer = ({ className, onClick, margin, children }) => {
+const ButtonContainer = ({className, onClick, children}) => {
 	return (
 		<button className={className} onClick={onClick}>
 			{children}
@@ -13,7 +13,7 @@ export const Button = styled(ButtonContainer)`
 	height: 45px;
 	color: #707070;
 	font-size: 18px;
-	margin: ${({ margin }) => (margin ? margin : '0px')};
+	margin: ${({margin}) => (margin ? margin : '0px')};
 	background-color: #fff;
 	border: 1px solid #d2d2d2;
 	border-radius: 8px;

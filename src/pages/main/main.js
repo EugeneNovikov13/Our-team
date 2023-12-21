@@ -1,19 +1,19 @@
-import { useSelector } from 'react-redux';
-import { selectMembers, selectTeamInfo } from '../../redux/selectors';
-import { Card, Container } from '../../components';
+import {useSelector} from 'react-redux';
+import {selectMembers, selectTeamInfo} from '../../redux/selectors';
+import {Card, Container} from '../../components';
 import styled from 'styled-components';
 
-const MainContainer = ({ className }) => {
+const MainContainer = ({className}) => {
 	const members = useSelector(selectMembers);
 	const teamInfo = useSelector(selectTeamInfo);
 
 	return (
 		<div className={className}>
-			<div className='main-discription'>
+			<div className='main-description'>
 				{teamInfo}
 			</div>
 			<Container>
-				{Object.entries(members).map(([id, { photo, name, age, about }]) => (
+				{Object.entries(members).map(([id, {photo, name, age, about}]) => (
 					<Card
 						key={id}
 						id={id}
@@ -29,7 +29,7 @@ const MainContainer = ({ className }) => {
 };
 
 export const Main = styled(MainContainer)`
-	& .main-discription {
+	& .main-description {
 		width: 70%;
 		margin: 5% 15% 0;
 	}

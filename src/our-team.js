@@ -1,13 +1,13 @@
-import { Route, Routes } from 'react-router-dom';
-import { Error, Footer, Header, Loader } from './components';
-import { Favorites, Main, Member } from './pages';
-import { ERROR } from './constants';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectIsLoading } from './redux/selectors';
-import { useEffect } from 'react';
-import { getMembersAsync } from './redux/actions';
+import {Route, Routes} from 'react-router-dom';
+import {Error, Footer, Header, Loader} from './components';
+import {Favorites, Main, Member} from './pages';
+import {ERROR} from './constants';
+import {useDispatch, useSelector} from 'react-redux';
+import {selectIsLoading} from './redux/selectors';
+import {useEffect} from 'react';
+import {getMembersAsync} from './redux/actions';
 import styled from 'styled-components';
-import { getTeamInfoAsync } from './redux/actions/get-team-info-async';
+import {getTeamInfoAsync} from './redux/actions/get-team-info-async';
 
 const AppColumn = styled.div`
 	display: flex;
@@ -41,22 +41,22 @@ export const OurTeam = () => {
 	return (
 		<AppColumn>
 			{isLoading ? (
-				<Loader />
+				<Loader/>
 			) : (
 				<>
-					<Header />
+					<Header/>
 					<Page>
 						<Routes>
-							<Route path='/' element={<Main />}></Route>
-							<Route path='/favorites' element={<Favorites />}></Route>
-							<Route path='/member/:id' element={<Member />}></Route>
+							<Route path='/' element={<Main/>}></Route>
+							<Route path='/favorites' element={<Favorites/>}></Route>
+							<Route path='/member/:id' element={<Member/>}></Route>
 							<Route
 								path='*'
-								element={<Error error={ERROR.PAGE_NOT_EXIST} />}
+								element={<Error error={ERROR.PAGE_NOT_EXIST}/>}
 							></Route>
 						</Routes>
 					</Page>
-					<Footer />
+					<Footer/>
 				</>
 			)}
 		</AppColumn>

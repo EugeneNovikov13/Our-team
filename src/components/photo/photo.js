@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const PhotoContainer = ({ className, src, rounded }) => {
+const PhotoContainer = ({className, src}) => {
 	return (
 		<img
 			className={className}
@@ -11,7 +11,7 @@ const PhotoContainer = ({ className, src, rounded }) => {
 };
 
 export const Photo = styled(PhotoContainer)`
-	width: ${({ rounded }) => rounded ? '100px' : '300px'};
-	height: ${({ rounded }) => rounded ? '100px' : '300px'};;
-	border-radius: ${({ rounded }) => rounded ? '50%' : ''};
+	width: ${({rounded}) => rounded ? '100px' : '300px'};
+	height: ${({rounded}) => rounded ? '100px' : '300px'};;
+	border-radius: ${({rounded}) => rounded ? '50%' : ''};
 `;

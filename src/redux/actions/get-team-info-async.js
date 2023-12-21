@@ -1,6 +1,6 @@
-import { get, ref } from 'firebase/database';
-import { db } from '../../firebase';
-import { ACTION_TYPE } from './action-type';
+import {get, ref} from 'firebase/database';
+import {db} from '../../firebase';
+import {ACTION_TYPE} from './action-type';
 
 export const getTeamInfoAsync = dispatch => {
 	const teamInfo = ref(db, 'team_info');

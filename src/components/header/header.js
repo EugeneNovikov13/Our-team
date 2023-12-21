@@ -1,11 +1,11 @@
-import { Logo, NavBar } from './components';
+import {Logo, NavBar} from './components';
 import styled from 'styled-components';
 
-const HeaderContainer = ({ className }) => {
+const HeaderContainer = ({className}) => {
 	return (
 		<header className={className}>
-			<Logo />
-			<NavBar />
+			<Logo/>
+			<NavBar/>
 		</header>
 	);
 };

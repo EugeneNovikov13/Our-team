@@ -1,22 +1,21 @@
-import { useEffect, useState } from 'react';
+import {useEffect, useRef, useState} from 'react';
 import styled from 'styled-components';
 
-const ProgressContainer = ({ className, label, percent, bgColor, textColor }) => {
+const ProgressContainer = ({className, label, percent }) => {
 	const [animationPercent, setAnimationPercent] = useState(0);
 	const [isAnimate, setIsAnimate] = useState(true);
+	const intervalRef = useRef(null);
 
 	const randomPercent = () => {
 		setAnimationPercent(Math.floor(Math.random() * 100));
 	};
 
-	let interval;
-
 	useEffect(() => {
-		interval = setInterval(randomPercent, 10);
+		intervalRef.current = setInterval(randomPercent, 10);
 
 		setTimeout(() => {
-			clearInterval(interval);
-			interval = 0;
+			clearInterval(intervalRef.current);
+			intervalRef.current = 0;
 			setIsAnimate(false);
 		}, 3000);
 	}, []);
@@ -40,11 +39,11 @@ export const Progress = styled(ProgressContainer)`
 
   @keyframes progress {
     from {
-      width: 0%;
+      width: 0;
     }
 
     to {
-      width:  ${({ percent }) => percent}%;
+      width:  ${({percent}) => percent}%;
     }
   }
 
@@ -63,11 +62,11 @@ export const Progress = styled(ProgressContainer)`
   }
 
   & .percent {
-    width: ${({ percent }) => percent}%;
+    width: ${({percent}) => percent}%;
     height: inherit;
-    background-color: ${({ bgColor }) => bgColor};
+    background-color: ${({bgColor}) => bgColor};
     border-radius: 5px;
-    color: ${({ textColor }) => textColor ? textColor : '#fff'};
+    color: ${({textColor}) => textColor ? textColor : '#fff'};
     display: flex;
     justify-content: center;
     align-items: center;

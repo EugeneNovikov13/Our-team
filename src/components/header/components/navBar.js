@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
 const Div = styled.div`
@@ -9,7 +9,7 @@ const Div = styled.div`
 	width: 100%;
 `;
 
-const NavBarContainer = ({ className }) => {
+const NavBarContainer = ({className}) => {
 	return (
 		<Div>
 			<nav className={className}>

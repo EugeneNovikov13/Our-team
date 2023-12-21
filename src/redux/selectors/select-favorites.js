@@ -1,1 +1,1 @@
-export const selectFavorites = ({ favorites }) => favorites.favMembers;
+export const selectFavorites = ({favorites}) => favorites.favMembers;
