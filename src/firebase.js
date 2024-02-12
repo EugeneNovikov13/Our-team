@@ -1,14 +1,14 @@
-import { initializeApp } from 'firebase/app';
-import { getDatabase } from 'firebase/database';
+import {initializeApp} from 'firebase/app';
+import {getDatabase} from 'firebase/database';
 
 const firebaseConfig = {
-	apiKey: 'AIzaSyDVnOf2VNAlWIh7gxkQg1pp3A3cItVNEBM',
-	authDomain: 'our-team-77ad3.firebaseapp.com',
-	databaseURL: 'https://our-team-77ad3-default-rtdb.europe-west1.firebasedatabase.app',
-	projectId: 'our-team-77ad3',
-	storageBucket: 'our-team-77ad3.appspot.com',
-	messagingSenderId: '533424581353',
-	appId: '1:533424581353:web:1b7e482bb0b8b40c98de78',
+	apiKey: "AIzaSyBxW4iZk_NRn1H7EZqetJk2qXGfrGPiWE0",
+	authDomain: "our-team-564f7.firebaseapp.com",
+	databaseURL: "https://our-team-564f7-default-rtdb.europe-west1.firebasedatabase.app",
+	projectId: "our-team-564f7",
+	storageBucket: "our-team-564f7.appspot.com",
+	messagingSenderId: "813641761745",
+	appId: "1:813641761745:web:4916e7f2f879d6971916f0"
 };
 
 const app = initializeApp(firebaseConfig);

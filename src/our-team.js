@@ -1,13 +1,13 @@
-import { Route, Routes } from 'react-router-dom';
-import { Error, Footer, Header, Loader } from './components';
-import { Favorites, Main, Member } from './pages';
-import { ERROR } from './constants';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectIsLoading } from './redux/selectors';
-import { useEffect } from 'react';
-import { getMembersAsync } from './redux/actions';
+import {Route, Routes} from 'react-router-dom';
+import {Error, Footer, Header, Loader} from './components';
+import {Favorites, Main, Member} from './pages';
+import {ERROR} from './constants';
+import {useDispatch, useSelector} from 'react-redux';
+import {selectIsLoading} from './redux/selectors';
+import {useEffect} from 'react';
+import {getMembersAsync} from './redux/actions';
+import {getTeamInfoAsync} from './redux/actions/get-team-info-async';
 import styled from 'styled-components';
-import { getTeamInfoAsync } from './redux/actions/get-team-info-async';
 
 const AppColumn = styled.div`
 	display: flex;
@@ -34,8 +34,8 @@ export const OurTeam = () => {
 	const isLoading = useSelector(selectIsLoading);
 
 	useEffect(() => {
-		dispatch(getMembersAsync);
 		dispatch(getTeamInfoAsync);
+		dispatch(getMembersAsync);
 	}, [dispatch]);
 
 	return (
