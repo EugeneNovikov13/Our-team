@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Our-team/static/css/main.6c74c0ca.css",
-    "main.js": "/Our-team/static/js/main.1a2500ab.js",
+    "main.js": "/Our-team/static/js/main.84fd8b85.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/Our-team/static/media/fontawesome-webfont.8ab9e16ae8a5ca66b6c1.svg",
     "static/media/fontawesome-webfont.eot": "/Our-team/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/Our-team/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
@@ -11,10 +11,10 @@
     "static/media/star.svg": "/Our-team/static/media/star.c459d3c74c897d69efaef1ef0d274afb.svg",
     "index.html": "/Our-team/index.html",
     "main.6c74c0ca.css.map": "/Our-team/static/css/main.6c74c0ca.css.map",
-    "main.1a2500ab.js.map": "/Our-team/static/js/main.1a2500ab.js.map"
+    "main.84fd8b85.js.map": "/Our-team/static/js/main.84fd8b85.js.map"
   },
   "entrypoints": [
     "static/css/main.6c74c0ca.css",
-    "static/js/main.1a2500ab.js"
+    "static/js/main.84fd8b85.js"
   ]
 }
